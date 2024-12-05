@@ -1,5 +1,6 @@
 package racingcar.view;
 
+import racingcar.dto.CarDTO;
 import racingcar.model.Car;
 
 import java.util.List;
@@ -9,15 +10,15 @@ public class OutputView {
         System.out.println("실행 결과");
     }
 
-    public void printOneRound(List<Car> cars) {
-        for (Car car : cars) {
+    public void printOneRound(List<CarDTO> cars) {
+        for (CarDTO car : cars) {
             printDistance(car);
         }
         System.out.println();
     }
 
-    private void printDistance(Car car) {
-        System.out.println(car.getName() + " : " + "-".repeat(car.getDistance()));
+    private void printDistance(CarDTO car) {
+        System.out.println(car.carName() + " : " + "-".repeat(car.distance()));
     }
 
     public void printResult(List<String> winners) {

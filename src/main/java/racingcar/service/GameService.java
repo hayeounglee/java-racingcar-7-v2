@@ -1,6 +1,7 @@
 package racingcar.service;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.dto.CarDTO;
 import racingcar.model.Car;
 
 import java.util.ArrayList;
@@ -41,7 +42,11 @@ public class GameService {
         return result;
     }
 
-    public List<Car> getCars() {
-        return cars;
+    public List<CarDTO> getCars() {
+        List<CarDTO> carDTOS = new ArrayList<>();
+        for (Car car : cars) {
+            carDTOS.add(new CarDTO(car.getName(), car.getDistance()))
+        }
+        return carDTOS;
     }
 }
