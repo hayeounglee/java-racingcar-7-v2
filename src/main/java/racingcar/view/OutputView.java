@@ -1,7 +1,6 @@
 package racingcar.view;
 
 import racingcar.dto.CarDTO;
-import racingcar.model.Car;
 
 import java.util.List;
 

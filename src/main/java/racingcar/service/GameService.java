@@ -39,13 +39,13 @@ public class GameService {
                 result.add(car.getName());
             }
         }
-        return result;
+        return List.copyOf(result);
     }
 
     public List<CarDTO> getCars() {
         List<CarDTO> carDTOS = new ArrayList<>();
         for (Car car : cars) {
-            carDTOS.add(new CarDTO(car.getName(), car.getDistance()))
+            carDTOS.add(new CarDTO(car.getName(), car.getDistance()));
         }
         return carDTOS;
     }
